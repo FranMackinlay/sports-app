@@ -1,13 +1,11 @@
 .card {
   min-height: 100%;
+  background-color: rgba(243, 243, 243, .8);
 }
 
 .card:hover {
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
   transition: all 250ms ease;
-}
-
-.variant-player {
 }
 
 .variant-player .card-title {
@@ -35,6 +33,7 @@
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   color: black;
+  text-align: justify;
 }
 
 .variant-player p {

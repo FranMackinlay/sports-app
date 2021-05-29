@@ -46,7 +46,7 @@ const TeamComponent = (props: any) => {
           </div>
         </div>
         <div className="col-md-12 p-0 team-players-details-container fm-mt-3">
-          <h1 className="fm-mb-2">Players Details</h1>
+          <h1 className="fm-mb-2">Players</h1>
           <div className="players-info">
             <ul className="list-unstyled fm-df fm-aliic fm-flww">
               {team?.players.length ? team.players.map(player => (
