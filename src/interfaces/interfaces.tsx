@@ -1,3 +1,12 @@
+export interface Player {
+  strCutout: string;
+  idPlayer: string;
+  strPlayer: string;
+  strPosition: string;
+  strDescriptionEN: string;
+  strBirthLocation: string;
+}
+
 export interface Team {
   idTeam: number;
   strAlternate: string;
@@ -6,8 +15,10 @@ export interface Team {
   strDescriptionEN: string;
   strStadiumThumb: string;
   strStadiumDescription: string;
+  players: Array<Player>;
 }
 
 export interface Card {
-  cardData: Team;
+  team?: Team;
+  player?: Player;
 }
