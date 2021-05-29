@@ -9,6 +9,7 @@
 
 .card-title {
   min-height: 4em;
+  color: black;
 }
 
 .card-li {
@@ -21,4 +22,5 @@
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
+  color: black;
 }

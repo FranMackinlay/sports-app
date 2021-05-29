@@ -10,7 +10,7 @@ const TeamCard: FC<Card> = ({ cardData }) => {
       <div className="card fm-p-2">
         <img className="card-img-top fm-maw50 fm-m-auto" src={cardData.strTeamBadge} alt="Team Badge" />
         <div className="card-body p-0 fm-df fm-jucb fm-fldc">
-          <h5 className="card-title fm-df fm-aliic">{cardData.strAlternate}</h5>
+          <h5 className="card-title text-center fm-w100 fm-df fm-global-center">{cardData.strAlternate}</h5>
           <p className="card-text">{cardData.strDescriptionEN}</p>
           <Link to={`/team/${cardData.idTeam}`} className="btn btn-primary">View team</Link>
         </div>
