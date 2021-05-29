@@ -1,10 +1,14 @@
 export interface Player {
   strCutout: string;
-  idPlayer: string;
+  idPlayer: number;
   strPlayer: string;
   strPosition: string;
   strDescriptionEN: string;
   strBirthLocation: string;
+}
+
+export interface League {
+  strLogo: string;
 }
 
 export interface Team {
