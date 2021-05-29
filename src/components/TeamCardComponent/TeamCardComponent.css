@@ -7,6 +7,18 @@
   transition: all 250ms ease;
 }
 
+.variant-player {
+}
+
+.variant-player .card-title {
+  min-height: unset;
+  margin-top: 1em;
+}
+
+.variant-player .btn {
+  margin: 0 auto;
+}
+
 .card-title {
   min-height: 4em;
   color: black;
@@ -23,4 +35,8 @@
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   color: black;
+}
+
+.variant-player p {
+  text-align: center;
 }
