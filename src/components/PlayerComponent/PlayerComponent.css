@@ -1,12 +1,31 @@
-.team-details-container {
+.player-details-container {
   background-color: rgba(0, 0, 0, .5);
   border-radius: 1em;
 }
 
-.team-details-container img {
+.player-details-container img {
   border-radius: 1em;
 }
 
-.team-details-component button {
+.player-details-component button {
   color: white !important;
+}
+
+.player-details {
+  min-width: 100%;
+}
+
+.fa-times:before {
+  color: red;
+}
+
+.fa-check:before {
+  color: greenyellow;
+}
+
+
+
+#description {
+  width: 100%;
+  height: 30em;
 }
