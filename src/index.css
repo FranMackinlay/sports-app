@@ -12,10 +12,18 @@ code {
     monospace;
 }
 
+#root {
+  color: white !important;
+}
+
 :root {
   --primary-color: #212529;
   --overlay-color: rgb(19 59 111 / 50%);
   --menu-speed: 0.75s;
+}
+
+img {
+  max-width: 100%;
 }
 
 form {
@@ -23,14 +31,15 @@ form {
 }
 
 html,
-nav,
-a,
 body {
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
-  color: black;
+  background: url('https://image.winudf.com/v2/image1/bGl0dGxlYXBwYXMuZm9vdGJhbGxoZDRrLndhbGxwYXBlcnNfc2NyZWVuXzRfMTU2ODU3Mzg3OF8wMTc/screen-10.jpg?fakeurl=1&type=.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   font-family: 'Circular-Loom';
+  overflow-x: hidden;
 }
 
 a:hover {
@@ -52,6 +61,10 @@ a:hover {
   font-size: 8em;
   animation: fa-spin 2.5s infinite ease-in-out;
   opacity: .2;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .fm-df {
