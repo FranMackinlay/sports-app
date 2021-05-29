@@ -3,7 +3,7 @@ import SportsSrv from '../../services/SportsSrv';
 import './MainScreenComponent.css';
 
 import { Team } from '../../interfaces/interfaces';
-import Card from '../CardComponent/CardComponent';
+import TeamCard from '../TeamCardComponent/TeamCardComponent';
 import LoadingBox from '../LoadingBox/LoadingBox';
 
 
@@ -29,7 +29,7 @@ const MainScreenComponent = () => {
           !teams.length ? (<LoadingBox></LoadingBox>) : (
             <ul className="list-unstyled fm-df fm-flww">
               {teams.map((team: Team) => (
-                <Card key={team.idTeam} cardData={team}></Card>
+                <TeamCard key={team.idTeam} cardData={team}></TeamCard>
               ))}
             </ul>
           )

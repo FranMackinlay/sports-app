@@ -5,3 +5,7 @@ export interface Team {
   strTeamBadge: string;
   strDescriptionEN: string;
 }
+
+export interface Card {
+  cardData: Team;
+}

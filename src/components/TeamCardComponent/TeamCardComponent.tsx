@@ -1,13 +1,9 @@
 import React, { FC } from 'react';
-import { Team } from '../../interfaces/interfaces';
+import { Card } from '../../interfaces/interfaces';
 import { Link } from 'react-router-dom';
 import './CardComponent.css';
 
-interface Card {
-  cardData: Team;
-}
-
-const Card: FC<Card> = ({ cardData }) => {
+const TeamCard: FC<Card> = ({ cardData }) => {
 
   return (
     <li className="card-li fm-mr-2 fm-mb-2">
@@ -23,4 +19,4 @@ const Card: FC<Card> = ({ cardData }) => {
   );
 };
 
-export default React.memo(Card);
+export default React.memo(TeamCard);
