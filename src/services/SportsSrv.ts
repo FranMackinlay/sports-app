@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {Player} from '../interfaces/interfaces';
 
 const API_URL = 'https://www.thesportsdb.com/api/v1/json/1';
 
@@ -35,12 +36,25 @@ const SportsSrv = {
 
     return player;
   },
+  editPlayer: async (newPlayer: Player) => {
+    const {data: {upsertedPlayer}} = await axios.put(`http://localhost:5000/api/player/${newPlayer.idPlayer}`, { newPlayer });
+
+    return upsertedPlayer;
+  },
   createPlayer: async () => {
 
   },
   removePlayerFromTeam: async () => {
 
   },
+  getLeague: async () => {
+    const { data: { leagues } } = await axios({
+      method: 'get',
+      url: `${API_URL}/lookupleague.php?id=4335`,
+    });
+    const response = Array.isArray(leagues) ? leagues[0] : leagues;
+    return response;
+  }
 }
 
 export default SportsSrv;
