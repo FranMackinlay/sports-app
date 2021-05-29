@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Team } from '../../interfaces/interfaces';
 import SportsSrv from '../../services/SportsSrv';
+import TeamCardComponent from '../TeamCardComponent/TeamCardComponent';
 import './TeamComponent.css';
 
 const TeamComponent = (props: any) => {
@@ -42,6 +43,19 @@ const TeamComponent = (props: any) => {
           <div className="stadium-info">
             <img src={team?.strStadiumThumb} alt="Stadium thumbnail" className="fm-mb-2" />
             <p>{team?.strStadiumDescription}</p>
+          </div>
+        </div>
+        <div className="col-md-12 p-0 team-players-details-container fm-mt-3">
+          <h1 className="fm-mb-2">Players Details</h1>
+          <div className="players-info">
+            <ul className="list-unstyled fm-df fm-aliic fm-flww">
+              {team?.players.length ? team.players.map(player => (
+                <TeamCardComponent key={player.idPlayer} player={player}></TeamCardComponent>
+                ))
+              : (
+                <div>We couldn't find any players for this team, try again later!</div>
+              )}
+            </ul>
           </div>
         </div>
       </div>
