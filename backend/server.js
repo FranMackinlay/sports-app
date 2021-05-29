@@ -1,9 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import articlesRouter from './routers/articlesRouter.js';
-import userRouter from './routers/userRouter.js';
 import mongoose from 'mongoose';
+import teamRouter from './routers/teamRouter.js';
+import playerRouter from './routers/playerRouter.js';
 
 dotenv.config();
 
@@ -18,8 +18,8 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/mistho', {
 });
 
 
-app.use('/api/users', userRouter);
-app.use('/api/articles', articlesRouter);
+app.use('/api/team', teamRouter);
+app.use('/api/player', playerRouter);
 
 app.get('/', (req, res) => {
   res.send('Server is ready!');
