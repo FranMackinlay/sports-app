@@ -29,7 +29,7 @@ const MainScreenComponent = () => {
           !teams.length ? (<LoadingBox></LoadingBox>) : (
             <ul className="list-unstyled fm-df fm-flww">
               {teams.map((team: Team) => (
-                <TeamCard key={team.idTeam} cardData={team}></TeamCard>
+                <TeamCard key={team.idTeam} team={team}></TeamCard>
               ))}
             </ul>
           )
