@@ -9,7 +9,7 @@ import LoadingBox from '../LoadingBox/LoadingBox';
 
 const MainScreenComponent = () => {
 
-  const [teams, setTeams] = useState([]);
+  const [teams, setTeams] = useState<Team[]>([]);
 
   const getTeams = async () => {
     const teams = await SportsSrv.getTeams();
