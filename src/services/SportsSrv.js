@@ -4,7 +4,7 @@ const API_URL = 'https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?
 
 const SportsSrv = {
   getTeams: async () => {
-    const { teams } = await axios({
+    const { data: { teams } } = await axios({
       method: 'get',
       url: API_URL,
     });
