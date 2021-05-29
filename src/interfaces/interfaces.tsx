@@ -4,6 +4,8 @@ export interface Team {
   strStadium: string;
   strTeamBadge: string;
   strDescriptionEN: string;
+  strStadiumThumb: string;
+  strStadiumDescription: string;
 }
 
 export interface Card {
