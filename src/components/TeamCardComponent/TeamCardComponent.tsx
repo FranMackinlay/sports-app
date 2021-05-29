@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Card } from '../../interfaces/interfaces';
 import { Link } from 'react-router-dom';
-import './CardComponent.css';
+import './TeamCardComponent.css';
 
 const TeamCard: FC<Card> = ({ cardData }) => {
 
