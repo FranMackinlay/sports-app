@@ -1,0 +1,12 @@
+.team-details-container {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 1em;
+}
+
+.team-details-container img {
+  border-radius: 1em;
+}
+
+.team-details-component button {
+  color: white !important;
+}
