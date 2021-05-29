@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SportsSrv from '../../services/SportsSrv';
 import './MainScreenComponent.css';
 
+import { Team } from '../../interfaces/interfaces';
+import Card from '../CardComponent/CardComponent';
+import LoadingBox from '../LoadingBox/LoadingBox';
+
+
 const MainScreenComponent = () => {
+
+  const [teams, setTeams] = useState([]);
+
+  const getTeams = async () => {
+    const teams = await SportsSrv.getTeams();
+    teams.length && setTeams(teams);
+  };
+
+  useEffect(() => {
+    getTeams();
+  }, [])
+
+
+
   return (
     <div>
-
+      <div className="teams-container col-md-10 offset-1">
+        {
+          !teams.length ? (<LoadingBox></LoadingBox>) : (
+            <ul className="list-unstyled fm-df fm-flww">
+              {teams.map((team: Team) => (
+                <Card key={team.idTeam} cardData={team}></Card>
+              ))}
+            </ul>
+          )
+        }
+      </div>
     </div>
   );
 }
