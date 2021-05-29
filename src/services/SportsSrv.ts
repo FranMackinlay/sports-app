@@ -10,17 +10,30 @@ const SportsSrv = {
     });
     return teams;
   },
-  getTeamDetails: async (id) => {
+  getTeamDetails: async (id: number) => {
     const { data: { teams } } = await axios({
       method: 'get',
       url: `${API_URL}/lookupteam.php?id=${id}`,
     });
 
     const response = Array.isArray(teams) ? teams[0] : teams;
+
+    const { data: { players } } = await axios({
+      method: 'get',
+      url: `http://localhost:5000/api/team/${1}`,
+    });
+
+    response.players = players;
+
     return response;
   },
-  getPlayer: async () => {
+  getPlayerDetails: async (idPlayer: number) => {
+    const { data: { player } } = await axios({
+      method: 'get',
+      url: `http://localhost:5000/api/player/${idPlayer}`,
+    });
 
+    return player;
   },
   createPlayer: async () => {
 
