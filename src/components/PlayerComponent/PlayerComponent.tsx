@@ -59,7 +59,7 @@ const PlayerComponent = (props: any) => {
 
   const onChangeBirthLocation = (e: ChangeEvent<HTMLInputElement>) => setNewBirthLocation(e.target.value);
 
-  const onChangeDescription = (e: ChangeEvent<HTMLInputElement>) => setNewDescription(e.target.value);
+  const onChangeDescription = (e: ChangeEvent<HTMLTextAreaElement>) => setNewDescription(e.target.value);
 
   const goBack = () => props.history.goBack();
 
@@ -148,7 +148,7 @@ const PlayerComponent = (props: any) => {
                   <i className="fa fa-times fm-mr-1" onClick={onClickCancelEditDescription}></i>
                   <i className="fa fa-check" onClick={onClickSaveEditDescription}></i>
                 </div>
-                <input type="text" name="description" id="description" className="fm-mr-1" onChange={onChangeDescription} />
+                <textarea name="description" id="description" className="fm-mr-1" onChange={onChangeDescription} />
               </div>
 
             ) : (
