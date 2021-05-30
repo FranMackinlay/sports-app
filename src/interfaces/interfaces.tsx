@@ -25,4 +25,5 @@ export interface Team {
 export interface Card {
   team?: Team;
   player?: Player;
+  isNewPlayer?: Boolean;
 }
