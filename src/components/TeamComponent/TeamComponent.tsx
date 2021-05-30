@@ -55,6 +55,9 @@ const TeamComponent = (props: any) => {
               : (
                 <div>We couldn't find any players for this team, try again later!</div>
               )}
+              <div>
+                <TeamCardComponent isNewPlayer={true}></TeamCardComponent>
+              </div>
             </ul>
           </div>
         </div>
