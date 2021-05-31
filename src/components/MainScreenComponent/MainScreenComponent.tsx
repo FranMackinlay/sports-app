@@ -27,8 +27,6 @@ const MainScreenComponent = () => {
     getLeague();
   }, [])
 
-
-
   return (
     <>
       {!teams.length || !league ? (

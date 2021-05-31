@@ -12,7 +12,6 @@ const PlayerComponent = (props: any) => {
   const [editDescription, setEditDescription] = useState(false);
   const [editPosition, setEditPosition] = useState(false)
   const [editBirthLocation, setEditBirthLocation] = useState(false);
-
   const [newDescription, setNewDescription] = useState('');
   const [newPosition, setNewPosition] = useState('');
   const [newBirthLocation, setNewBirthLocation] = useState('');
@@ -37,7 +36,6 @@ const PlayerComponent = (props: any) => {
       ...player!,
       strBirthLocation: newBirthLocation,
     });
-
   };
 
   const onClickSaveEditDescription = () => {
@@ -57,7 +55,6 @@ const PlayerComponent = (props: any) => {
   const onChangeDescription = (e: ChangeEvent<HTMLTextAreaElement>) => setNewDescription(e.target.value);
 
   const onChangeImage = (e: ChangeEvent<HTMLInputElement>) => setNewImage(e.target.value);
-
 
   const goBack = () => props.history.push(`/team/${localStorage.getItem('team')}`);
 
