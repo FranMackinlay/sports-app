@@ -11,6 +11,10 @@
   color: white !important;
 }
 
+.btn-danger {
+  right: 1em;
+}
+
 .player-details {
   min-width: 100%;
 }
