@@ -9,16 +9,16 @@ const TeamComponent = (props: any) => {
 
   const [team, setTeam] = useState<Team>();
 
-  const getTeam = async () => {
-    const idTeam = props.match.params.idTeam;
-    const team = await SportsSrv.getTeamDetails(idTeam);
-    console.log(`team`, team);
-    team.idTeam && setTeam(team);
-  }
-
   useEffect(() => {
+    const getTeam = async () => {
+      const idTeam = props.match.params.idTeam;
+      const team = await SportsSrv.getTeamDetails(idTeam);
+      team.idTeam && setTeam(team);
+    }
+
     getTeam();
-  }, [])
+    localStorage.setItem('team', props.match.params.idTeam);
+  }, [props.match.params.idTeam]);
 
   return (
     <div className="team-details-component">

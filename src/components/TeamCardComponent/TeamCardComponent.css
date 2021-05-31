@@ -18,14 +18,6 @@
   width: 13em;
 }
 
-.bi-plus-circle {
-  font-size: 3.9em;
-}
-
-.bi-plus-circle::before {
-  color: #2ca044;
-}
-
 .variant-player .btn {
   margin: 0 auto;
 }
