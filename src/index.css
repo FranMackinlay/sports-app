@@ -46,6 +46,21 @@ a:hover {
   text-decoration: none;
 }
 
+.bi-plus-circle, .bi-cloud-plus {
+  font-size: 3.9em;
+  transition: all 250ms ease-in-out;
+}
+
+.bi-cloud-plus:hover {
+  transform: scale(1.4);
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.bi-plus-circle::before {
+  color: #2ca044;
+}
+
 /* Loading box */
 
 .loading-box {
