@@ -700,9 +700,7 @@ export function createPlayer(newPlayer) {
 }
 
 export function removePlayer(idPlayer) {
-  console.log(`players.length 1`, players.length);
   players = players.filter(player => player.idPlayer.toString() !== idPlayer.toString());
-  console.log(`players.length 2`, players.length);
 
   return players;
 }
