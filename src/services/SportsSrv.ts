@@ -36,16 +36,23 @@ const SportsSrv = {
 
     return player;
   },
-  editPlayer: async (newPlayer: Player) => {
+  editPlayer: async (newPlayer: Player, isNewPlayer: boolean) => {
+
+    if (isNewPlayer) return SportsSrv.createPlayer(newPlayer);
+
     const {data: {upsertedPlayer}} = await axios.put(`http://localhost:5000/api/player/${newPlayer.idPlayer}`, { newPlayer });
 
     return upsertedPlayer;
   },
-  createPlayer: async () => {
+  createPlayer: async (newPlayer: Player) => {
+    const {data: {createdPlayer}} = await axios.post(`http://localhost:5000/api/player`, { newPlayer });
 
+    return createdPlayer;
   },
-  removePlayerFromTeam: async () => {
+  removePlayerFromTeam: async (idPlayer: string) => {
+    const {data: {isDeleteSuccess}} = await axios.delete(`http://localhost:5000/api/player/${idPlayer}`)
 
+    return isDeleteSuccess;
   },
   getLeague: async () => {
     const { data: { leagues } } = await axios({
