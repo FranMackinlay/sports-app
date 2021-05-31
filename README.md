@@ -1,4 +1,4 @@
-# Hivency Frontend Test
+# Sports App
 ## Installation & Usage
 
 - Clone repo
