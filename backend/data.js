@@ -1,4 +1,4 @@
-const players = [
+let players = [
   {
     dateBorn: "1990-08-12",
     dateSigned: "2014-08-25",
@@ -671,5 +671,40 @@ const players = [
     strYoutube: ""
   },
 ];
+
+export function getPlayers() {
+  return players;
+}
+
+export function findPlayer(idPlayer) {
+  const player = players.find(player => player.idPlayer.toString() === idPlayer.toString());
+
+  return player;
+}
+
+export function updatePlayer(newPlayer, idPlayer) {
+  let upsertedPlayer;
+  players = players.map(player => {
+    if (player.idPlayer === idPlayer) {
+      player = newPlayer
+      upsertedPlayer = player;
+    };
+    return player;
+  });
+
+  return upsertedPlayer;
+}
+
+export function createPlayer(newPlayer) {
+  players.push(newPlayer);
+}
+
+export function removePlayer(idPlayer) {
+  console.log(`players.length 1`, players.length);
+  players = players.filter(player => player.idPlayer.toString() !== idPlayer.toString());
+  console.log(`players.length 2`, players.length);
+
+  return players;
+}
 
 export default players;
